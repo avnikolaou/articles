@@ -13,7 +13,17 @@ export const ThemeToggle = () => {
   }, []);
 
   if (!mounted) {
-    return null;
+    return (
+      <div className="relative inline-flex h-9 w-16 items-center rounded-full bg-muted p-1" aria-hidden="true">
+        <div className="absolute inset-1 rounded-full bg-accent" />
+
+        <div className="relative z-10 flex w-full items-center justify-between px-1">
+          <Sun size={16} className="opacity-30" />
+        </div>
+
+        <div className="absolute right-1 top-1 h-7 w-7 rounded-full bg-background" />
+      </div>
+    );
   }
 
   return (
