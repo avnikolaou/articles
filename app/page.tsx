@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { ThemeToggle } from '@/app/providers/theme-toggle';
+import Footer from '@/app/components/footer';
 
 const Home = () => {
   return (
@@ -15,18 +16,18 @@ const Home = () => {
             AN
           </Link>
           <div className="flex items-center gap-8">
-            <Link href="/articles" className="text-sm text-foreground/70 hover:text-accent transition-colors">
-              Articles
-            </Link>
+            {/*<Link href="/articles" className="text-sm text-foreground/70 hover:text-accent transition-colors">*/}
+            {/*  Articles*/}
+            {/*</Link>*/}
             <Link href="/about" className="text-sm text-foreground/70 hover:text-accent transition-colors">
               About
             </Link>
             <Link href="/contact" className="text-sm text-foreground/70 hover:text-accent transition-colors">
               Contact
             </Link>
-            <Link href="/admin" className="text-sm text-foreground/70 hover:text-accent transition-colors">
-              Admin
-            </Link>
+            {/*<Link href="/admin" className="text-sm text-foreground/70 hover:text-accent transition-colors">*/}
+            {/*  Admin*/}
+            {/*</Link>*/}
             <ThemeToggle />
           </div>
         </div>
@@ -58,13 +59,13 @@ const Home = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mb-20">
-          <Link
-            href="/articles"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-medium rounded-lg hover:bg-accent/90 transition-colors group"
-          >
-            Read Articles
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          {/*<Link*/}
+          {/*  href="/articles"*/}
+          {/*  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-medium rounded-lg hover:bg-accent/90 transition-colors group"*/}
+          {/*>*/}
+          {/*  Read Articles*/}
+          {/*  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />*/}
+          {/*</Link>*/}
           <Link
             href="/about"
             className="inline-flex items-center justify-center px-6 py-3 border border-border bg-secondary/20 hover:bg-secondary/40 text-foreground font-medium rounded-lg transition-colors"
@@ -129,49 +130,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="border-t border-border/50 mt-24">
-        <div className="max-w-4xl mx-auto px-6 py-12">
-          <div className="flex flex-col gap-8">
-            <div>
-              <p className="text-sm font-semibold text-foreground/60 uppercase tracking-wide mb-4">Connect</p>
-              <div className="flex gap-4">
-                <a
-                  href="https://github.com/avraam"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 rounded-lg border border-border/50 hover:border-accent/50 text-foreground/70 hover:text-accent transition-colors"
-                  aria-label="GitHub"
-                >
-                  <Github className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://linkedin.com/in/avraam-nikolaou/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 rounded-lg border border-border/50 hover:border-accent/50 text-foreground/70 hover:text-accent transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="mailto:hello@avraam.dev"
-                  className="p-2.5 rounded-lg border border-border/50 hover:border-accent/50 text-foreground/70 hover:text-accent transition-colors"
-                  aria-label="Email"
-                >
-                  <Mail className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-
-            <div className="border-t border-border/50 pt-8">
-              <p className="text-xs text-foreground/50">
-                © 2026 Avraam Nikolaou. Built with Next.js, Tailwind CSS, and TypeScript.
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 };

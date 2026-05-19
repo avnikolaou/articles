@@ -47,7 +47,7 @@ const AboutPage = () => {
           <section className="space-y-4">
             <h2 className="text-2xl font-bold">Background</h2>
             <p className="text-foreground/80 leading-relaxed">
-              With over 14 years of experience in frontend development, I&apos;ve had the privilege of working on diverse projects 
+              With over 7 years of experience in frontend development, I&apos;ve had the privilege of working on diverse projects
               ranging from early-stage startups to large-scale applications. My journey in web development has shaped my deep appreciation 
               for clean code, performance optimization, and user-centric design.
             </p>
