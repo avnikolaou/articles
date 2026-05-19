@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Github, Linkedin, Mail, ArrowLeft } from 'lucide-react';
+
+import { ArrowLeft, Github, Linkedin, Mail } from 'lucide-react';
+
 import { ThemeToggle } from '@/app/providers/theme-toggle';
 
 export const metadata: Metadata = {

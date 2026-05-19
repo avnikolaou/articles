@@ -1,7 +1,9 @@
 import Link from 'next/link';
-import { Calendar, Clock, ArrowLeft } from 'lucide-react';
-import { MOCK_ARTICLES } from '@/app/lib/types';
 import { notFound } from 'next/navigation';
+
+import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+
+import { MOCK_ARTICLES } from '@/app/lib/types';
 
 interface ArticlePageProps {
   params: {

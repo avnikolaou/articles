@@ -2,6 +2,7 @@
 
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+
 import { Moon, Sun } from 'lucide-react';
 
 export const ThemeToggle = () => {
@@ -9,6 +10,7 @@ export const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 

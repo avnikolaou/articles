@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
-import { ThemeToggle } from '@/app/providers/theme-toggle';
+
 import Footer from '@/app/components/footer';
+import { ThemeToggle } from '@/app/providers/theme-toggle';
 
 export const metadata: Metadata = {
   title: 'Avraam Nikolaou | Frontend Developer',
@@ -94,7 +94,7 @@ const Home = () => {
             href="/about"
             className="inline-flex items-center justify-center px-6 py-3 border border-border bg-secondary/20 hover:bg-secondary/40 text-foreground font-medium rounded-lg transition-colors"
           >
-            Learn More
+            About Me
           </Link>
         </div>
 
