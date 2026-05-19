@@ -2,9 +2,11 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+
 import { Search } from 'lucide-react';
-import { ThemeToggle } from '@/app/providers/theme-toggle';
+
 import { MOCK_ARTICLES } from '@/app/lib/types';
+import { ThemeToggle } from '@/app/providers/theme-toggle';
 
 const ArticlesPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');

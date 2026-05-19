@@ -1,7 +1,9 @@
 import Link from 'next/link';
-import { Plus, Edit2, Trash2 } from 'lucide-react';
-import { ThemeToggle } from '@/app/providers/theme-toggle';
+
+import { Edit2, Plus, Trash2 } from 'lucide-react';
+
 import { MOCK_ARTICLES } from '@/app/lib/types';
+import { ThemeToggle } from '@/app/providers/theme-toggle';
 
 const AdminPage = () => {
   return (
