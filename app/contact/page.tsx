@@ -1,6 +1,30 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Github, Linkedin, Mail, ArrowLeft } from 'lucide-react';
 import { ThemeToggle } from '@/app/providers/theme-toggle';
+
+export const metadata: Metadata = {
+  title: 'Contact | Avraam Nikolaou',
+  description:
+    'Get in touch with Avraam Nikolaou for frontend consulting, performance optimization, technical writing, or collaboration opportunities.',
+  alternates: {
+    canonical: '/contact'
+  },
+  openGraph: {
+    title: 'Contact | Avraam Nikolaou',
+    description:
+      'Get in touch with Avraam Nikolaou for frontend consulting, performance optimization, technical writing, or collaboration opportunities.',
+    url: '/contact',
+    siteName: 'Avraam Nikolaou',
+    type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact | Avraam Nikolaou',
+    description:
+      'Get in touch with Avraam Nikolaou for frontend consulting, performance optimization, technical writing, or collaboration opportunities.'
+  }
+};
 
 const ContactPage = () => {
   return (
