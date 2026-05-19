@@ -52,7 +52,7 @@ const Home = () => {
 
         {/* Subheading */}
         <p className="text-lg text-foreground/70 max-w-2xl mb-12 leading-relaxed text-balance">
-          I&apos;m a frontend developer with over 14 years of experience crafting scalable, user-centric applications.
+          I&apos;m a frontend developer with over 7 years of experience crafting scalable, user-centric applications.
           Here I share insights on modern web development, performance optimization, and building delightful user
           experiences.
         </p>
