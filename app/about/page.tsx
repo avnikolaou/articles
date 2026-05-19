@@ -18,18 +18,18 @@ const AboutPage = () => {
             <Link href="/" className="text-sm text-foreground/70 hover:text-accent transition-colors">
               Home
             </Link>
-            <Link href="/articles" className="text-sm text-foreground/70 hover:text-accent transition-colors">
-              Articles
-            </Link>
+            {/*<Link href="/articles" className="text-sm text-foreground/70 hover:text-accent transition-colors">*/}
+            {/*  Articles*/}
+            {/*</Link>*/}
             <Link href="/about" className="text-sm text-accent font-medium">
               About
             </Link>
             <Link href="/contact" className="text-sm text-foreground/70 hover:text-accent transition-colors">
               Contact
             </Link>
-            <Link href="/admin" className="text-sm text-foreground/70 hover:text-accent transition-colors">
-              Admin
-            </Link>
+            {/*<Link href="/admin" className="text-sm text-foreground/70 hover:text-accent transition-colors">*/}
+            {/*  Admin*/}
+            {/*</Link>*/}
             <ThemeToggle />
           </div>
         </div>
@@ -203,7 +203,7 @@ const AboutPage = () => {
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <a
-                href="https://github.com/avraam"
+                href="https://github.com/avnikolaou"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 hover:border-accent/50 text-foreground/70 hover:text-accent transition-colors"

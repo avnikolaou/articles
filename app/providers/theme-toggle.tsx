@@ -12,7 +12,9 @@ export const ThemeToggle = () => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <button
@@ -33,9 +35,7 @@ export const ThemeToggle = () => {
         <Sun
           size={16}
           className={`transition-all duration-300 ${
-            theme === 'light'
-              ? 'text-accent-foreground opacity-100'
-              : 'opacity-30'
+            theme === 'light' ? 'text-accent-foreground opacity-100' : 'opacity-30'
           }`}
         />
 
@@ -43,9 +43,7 @@ export const ThemeToggle = () => {
         <Moon
           size={16}
           className={`transition-all duration-300 ${
-            theme === 'dark'
-              ? 'text-accent-foreground opacity-100'
-              : 'opacity-30'
+            theme === 'dark' ? 'text-accent-foreground opacity-100' : 'opacity-30'
           }`}
         />
       </div>

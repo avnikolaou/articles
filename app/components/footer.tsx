@@ -8,7 +8,7 @@ const Footer = () => (
           <p className="text-sm font-semibold text-foreground/60 uppercase tracking-wide mb-4">Connect</p>
           <div className="flex gap-4">
             <a
-              href="https://github.com/avraam"
+              href="https://github.com/avnikolaou"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-lg border border-border/50 hover:border-accent/50 text-foreground/70 hover:text-accent transition-colors"

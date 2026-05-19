@@ -18,18 +18,18 @@ const ContactPage = () => {
             <Link href="/" className="text-sm text-foreground/70 hover:text-accent transition-colors">
               Home
             </Link>
-            <Link href="/articles" className="text-sm text-foreground/70 hover:text-accent transition-colors">
-              Articles
-            </Link>
+            {/*<Link href="/articles" className="text-sm text-foreground/70 hover:text-accent transition-colors">*/}
+            {/*  Articles*/}
+            {/*</Link>*/}
             <Link href="/about" className="text-sm text-foreground/70 hover:text-accent transition-colors">
               About
             </Link>
             <Link href="/contact" className="text-sm text-accent font-medium">
               Contact
             </Link>
-            <Link href="/admin" className="text-sm text-foreground/70 hover:text-accent transition-colors">
-              Admin
-            </Link>
+            {/*<Link href="/admin" className="text-sm text-foreground/70 hover:text-accent transition-colors">*/}
+            {/*  Admin*/}
+            {/*</Link>*/}
             <ThemeToggle />
           </div>
         </div>
