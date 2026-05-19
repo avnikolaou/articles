@@ -1,7 +1,31 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { ThemeToggle } from '@/app/providers/theme-toggle';
 import Footer from '@/app/components/footer';
+
+export const metadata: Metadata = {
+  title: 'Avraam Nikolaou | Frontend Developer',
+  description:
+    'Frontend developer building beautiful, performant web applications. Read articles on modern web development.',
+  alternates: {
+    canonical: '/'
+  },
+  openGraph: {
+    title: 'Avraam Nikolaou | Frontend Developer',
+    description:
+      'Frontend developer building beautiful, performant web applications. Read articles on modern web development.',
+    url: '/',
+    siteName: 'Avraam Nikolaou',
+    type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Avraam Nikolaou | Frontend Developer',
+    description:
+      'Frontend developer building beautiful, performant web applications. Read articles on modern web development.'
+  }
+};
 
 const Home = () => {
   return (

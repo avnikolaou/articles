@@ -1,6 +1,30 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { ThemeToggle } from '@/app/providers/theme-toggle';
+
+export const metadata: Metadata = {
+  title: 'About | Avraam Nikolaou',
+  description:
+    'Learn more about Avraam Nikolaou, a frontend engineer focused on scalable architecture, performance, and user-centric product development.',
+  alternates: {
+    canonical: '/about'
+  },
+  openGraph: {
+    title: 'About | Avraam Nikolaou',
+    description:
+      'Learn more about Avraam Nikolaou, a frontend engineer focused on scalable architecture, performance, and user-centric product development.',
+    url: '/about',
+    siteName: 'Avraam Nikolaou',
+    type: 'profile'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About | Avraam Nikolaou',
+    description:
+      'Learn more about Avraam Nikolaou, a frontend engineer focused on scalable architecture, performance, and user-centric product development.'
+  }
+};
 
 const AboutPage = () => {
   return (
