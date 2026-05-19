@@ -35,7 +35,7 @@ const ArticleDetail = ({ params }: ArticlePageProps) => {
               About
             </Link>
             <Link
-              href="mailto:hello@avraam.dev"
+              href="mailto:avnikolaou@outlook.com"
               className="text-sm text-foreground/70 hover:text-accent transition-colors"
             >
               Contact
