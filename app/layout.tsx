@@ -2,8 +2,6 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { ReactNode } from 'react';
 
-import { Analytics } from '@vercel/analytics/next';
-
 import { Providers } from '@/app/providers/theme-provider';
 
 import './globals.css';
@@ -43,10 +41,7 @@ const RootLayout = ({
 }>) => (
   <html lang="en" suppressHydrationWarning>
     <body className="font-sans antialiased bg-background text-foreground">
-      <Providers>
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-      </Providers>
+      <Providers>{children}</Providers>
     </body>
   </html>
 );

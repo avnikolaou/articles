@@ -1,9 +1,11 @@
 import nextVitals from 'eslint-config-next/core-web-vitals';
+import prettier from 'eslint-config-prettier';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import unusedImports from 'eslint-plugin-unused-imports';
 
 const eslintConfig = [
   ...nextVitals,
+  prettier,
   {
     plugins: {
       'simple-import-sort': simpleImportSort,
