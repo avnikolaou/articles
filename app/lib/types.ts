@@ -44,7 +44,7 @@ By implementing these optimization techniques, you can build React applications 
     category: 'React',
     tags: ['performance', 'optimization', 'react'],
     publishedAt: '2024-01-15',
-    readTime: 8,
+    readTime: 8
   },
   {
     id: uuidv4(),
@@ -75,13 +75,13 @@ Web Components are poised to become a major part of web development, offering a 
     category: 'Web APIs',
     tags: ['web-components', 'standards', 'future'],
     publishedAt: '2024-01-08',
-    readTime: 12,
+    readTime: 12
   },
   {
     id: uuidv4(),
     title: 'Optimizing Core Web Vitals for Better UX',
     slug: 'optimizing-core-web-vitals',
-    excerpt: 'A comprehensive guide to improving your site\'s Core Web Vitals scores',
+    excerpt: "A comprehensive guide to improving your site's Core Web Vitals scores",
     content: `# Optimizing Core Web Vitals for Better UX
 
 Core Web Vitals are three key metrics that Google uses to measure user experience. Understanding and optimizing for these metrics is crucial for your website's success.
@@ -114,6 +114,6 @@ Optimizing Core Web Vitals is not just about performance; it's about providing a
     category: 'Performance',
     tags: ['core-web-vitals', 'ux', 'performance'],
     publishedAt: '2023-12-28',
-    readTime: 10,
-  },
+    readTime: 10
+  }
 ];

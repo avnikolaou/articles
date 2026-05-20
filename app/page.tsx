@@ -29,13 +29,13 @@ export const metadata: Metadata = {
 
 const Home = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/5">
+    <main className="from-background via-background to-secondary/5 min-h-screen bg-gradient-to-br">
       {/* Navigation */}
-      <nav className="border-b border-border/50">
-        <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
+      <nav className="border-border/50 border-b">
+        <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-6">
           <Link
             href="/"
-            className="text-xl font-bold bg-gradient-to-r from-accent to-accent/70 bg-clip-text text-transparent"
+            className="from-accent to-accent/70 bg-gradient-to-r bg-clip-text text-xl font-bold text-transparent"
           >
             AN
           </Link>
@@ -43,10 +43,10 @@ const Home = () => {
             {/*<Link href="/articles" className="text-sm text-foreground/70 hover:text-accent transition-colors">*/}
             {/*  Articles*/}
             {/*</Link>*/}
-            <Link href="/about" className="text-sm text-foreground/70 hover:text-accent transition-colors">
+            <Link href="/about" className="text-foreground/70 hover:text-accent text-sm transition-colors">
               About
             </Link>
-            <Link href="/contact" className="text-sm text-foreground/70 hover:text-accent transition-colors">
+            <Link href="/contact" className="text-foreground/70 hover:text-accent text-sm transition-colors">
               Contact
             </Link>
             {/*<Link href="/admin" className="text-sm text-foreground/70 hover:text-accent transition-colors">*/}
@@ -58,31 +58,31 @@ const Home = () => {
       </nav>
 
       {/* Hero Section */}
-      <div className="max-w-4xl mx-auto px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-4xl px-6 py-24 md:py-32">
         {/* Greeting Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-xs font-medium text-accent mb-8">
-          <span className="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+        <div className="bg-accent/10 border-accent/30 text-accent mb-8 inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-medium">
+          <span className="bg-accent h-2 w-2 animate-pulse rounded-full"></span>
           Welcome to my digital space
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">
+        <h1 className="mb-6 text-5xl font-bold tracking-tight text-balance md:text-6xl">
           Building beautiful,{' '}
-          <span className="text-transparent bg-gradient-to-r from-accent via-accent/80 to-accent/60 bg-clip-text">
+          <span className="from-accent via-accent/80 to-accent/60 bg-gradient-to-r bg-clip-text text-transparent">
             performant
           </span>{' '}
           web experiences
         </h1>
 
         {/* Subheading */}
-        <p className="text-lg text-foreground/70 max-w-2xl mb-12 leading-relaxed text-balance">
+        <p className="text-foreground/70 mb-12 max-w-2xl text-lg leading-relaxed text-balance">
           I&apos;m a frontend developer with over 7 years of experience crafting scalable, user-centric applications.
           Here I share insights on modern web development, performance optimization, and building delightful user
           experiences.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-20">
+        <div className="mb-20 flex flex-col gap-4 sm:flex-row">
           {/*<Link*/}
           {/*  href="/articles"*/}
           {/*  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-medium rounded-lg hover:bg-accent/90 transition-colors group"*/}
@@ -92,7 +92,7 @@ const Home = () => {
           {/*</Link>*/}
           <Link
             href="/about"
-            className="inline-flex items-center justify-center px-6 py-3 border border-border bg-secondary/20 hover:bg-secondary/40 text-foreground font-medium rounded-lg transition-colors"
+            className="border-border bg-secondary/20 hover:bg-secondary/40 text-foreground inline-flex items-center justify-center rounded-lg border px-6 py-3 font-medium transition-colors"
           >
             About Me
           </Link>
@@ -100,12 +100,12 @@ const Home = () => {
 
         {/* Featured Articles Preview - Coming Soon */}
         <div className="space-y-6">
-          <p className="text-sm font-semibold text-foreground/60 uppercase tracking-wide">Featured Articles</p>
+          <p className="text-foreground/60 text-sm font-semibold tracking-wide uppercase">Featured Articles</p>
 
-          <div className="flex items-center justify-center py-12 rounded-lg border border-border/50 bg-secondary/20">
-            <div className="text-center space-y-3">
+          <div className="border-border/50 bg-secondary/20 flex items-center justify-center rounded-lg border py-12">
+            <div className="space-y-3 text-center">
               <p className="text-foreground font-medium">Articles coming soon</p>
-              <p className="text-sm text-foreground/70">
+              <p className="text-foreground/70 text-sm">
                 Check back soon for in-depth articles on frontend development, performance optimization, and web
                 technologies.
               </p>

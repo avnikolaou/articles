@@ -30,17 +30,20 @@ A modern, minimal portfolio website built with Next.js 15, TypeScript, and Tailw
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/avnikolaou/articles.git
 cd articles
 ```
 
 2. Install dependencies:
+
 ```bash
 pnpm install
 ```
 
 3. Run the development server:
+
 ```bash
 pnpm dev
 ```
@@ -72,17 +75,20 @@ components/
 ## Features
 
 ### Home Page
+
 - Hero section with call-to-action
 - Featured articles preview
 - Social links
 
 ### Articles
+
 - Full article listing with search
 - Category filtering
 - Individual article pages with metadata
 - Read time calculations
 
 ### Admin Dashboard
+
 - Article management table
 - Statistics overview
 - Action buttons for edit/delete (UI ready)
@@ -110,6 +116,7 @@ Edit `lib/types.ts` to add new articles to the `MOCK_ARTICLES` array:
 ### Styling
 
 Global styles are in `app/globals.css`. The design uses Tailwind CSS v4 with custom color tokens:
+
 - `--background`: Main background color
 - `--foreground`: Text color
 - `--accent`: Teal accent color
