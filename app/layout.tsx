@@ -14,23 +14,29 @@ export const metadata: Metadata = {
   title: 'Avraam Nikolaou | Frontend Developer',
   description:
     'Frontend developer building beautiful, performant web applications. Read articles on modern web development.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)'
+        url: '/favicon.ico',
+        sizes: 'any'
       },
       {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)'
-      },
-      {
-        url: '/icon.svg',
+        url: '/favicon.svg',
         type: 'image/svg+xml'
+      },
+      {
+        url: '/favicon-96x96.png',
+        sizes: '96x96',
+        type: 'image/png'
       }
     ],
-    apple: '/apple-icon.png'
+    apple: [
+      {
+        url: '/apple-touch-icon.png',
+        sizes: '180x180',
+        type: 'image/png'
+      }
+    ]
   }
 };
 
@@ -40,7 +46,7 @@ const RootLayout = ({
   children: ReactNode;
 }>) => (
   <html lang="en" suppressHydrationWarning>
-    <body className="font-sans antialiased bg-background text-foreground">
+    <body className="bg-background text-foreground font-sans antialiased">
       <Providers>{children}</Providers>
     </body>
   </html>
