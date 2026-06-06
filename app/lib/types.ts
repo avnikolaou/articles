@@ -15,105 +15,52 @@ export interface Article {
 export const MOCK_ARTICLES: Article[] = [
   {
     id: uuidv4(),
-    title: 'Building High-Performance React Applications',
-    slug: 'building-high-performance-react-applications',
-    excerpt: 'Techniques and best practices for optimizing React performance at scale',
-    content: `# Building High-Performance React Applications
+    title: 'From Writing Code to Judging Code',
+    slug: 'from-writing-code-to-judging-code',
+    excerpt:
+      'How AI has reshaped the junior-to-senior path, shifting the value of engineering from writing code to judging it.',
+    content: `I have wanted to write technical articles for a long time. This is my first attempt, so be gentle. All the code regarding the site was AI generated. No words in this article were AI-generated.
 
-React is one of the most popular JavaScript libraries for building user interfaces. However, without proper optimization techniques, your React application can become slow and sluggish.
+## The Collapse of the Old Skill Ladder
 
-## Key Performance Optimization Techniques
+Let's state the obvious here. The hiring process has changed with the introduction of AI in our own little world. Back in the P.A.I (Prior to AI) era, to add a Front-End developer to a team, there was a straightforward process. An introductory discussion with HR, a task that involved creating a "simple" app that most likely consumed an API and displayed Pokémon or movies in a screen, a discussion with a senior member about the project presented, maybe chat about the approach, etc.
 
-### 1. Memoization
-Use React.memo to prevent unnecessary re-renders of components that receive the same props.
+This was meant to show that a developer has a basic understanding of how a library like React works (yes, it's a library, let's accept it and move on), show some syntax understanding and give the chance to the interviewer to understand if the person that wrote this small app, would be a good fit for the team.
 
-### 2. Code Splitting
-Implement code splitting with React.lazy and Suspense to reduce initial bundle size.
+## The Shift from Writing Code to Judging Code
 
-### 3. Virtual Scrolling
-For large lists, use virtual scrolling to render only visible items, significantly improving performance.
+Well, those days are gone. What was described above, that could take hours or even days, depending on experience, can now be AI generated in minutes. So, to the big question. How are you going to make that judgment now? How can you tell that the person behind a GitHub repo, is the right one?
 
-### 4. Avoiding Inline Functions
-Inline functions create new references on every render, causing child components to re-render unnecessarily.
+Junior vs Senior distinction, has reshaped and for the near future, it's not going to return to what it was. Seniors are now way more to the "judging code" section, than "writing code". In a real-world scenario, the junior can now ask Claude or ChatGPT to generate a custom React hook, connect it to an API and even write the tests. The code will often be compiled on the first attempt. What AI cannot tell them is whether that hook belongs in the component tree, whether it creates an unnecessary abstraction, or whether the pattern will survive six months of product evolution. It cannot evaluate the tradeoffs, detect subtle architectural flaws and align decisions with long-term product goals. The senior role shifts closer to reviewer than author, with a larger share of time spent validating and guiding. The proportion of time spent reviewing, validating and guiding increases dramatically. He is now a system designer and not just a higher level implementor, a risk manager and not just a problem solver.
 
-### 5. Using useCallback and useMemo
-These hooks help you memoize functions and expensive computations to avoid recreating them on every render.
+## The "AI-Boosted Junior" Problem
 
-## Conclusion
-By implementing these optimization techniques, you can build React applications that are not only faster but also provide a better user experience.`,
-    category: 'React',
-    tags: ['performance', 'optimization', 'react'],
-    publishedAt: '2024-01-15',
-    readTime: 8
-  },
-  {
-    id: uuidv4(),
-    title: 'The Future of Web Development: Web Components',
-    slug: 'future-of-web-development-web-components',
-    excerpt: 'Exploring the rise of web components and their impact on modern frontend development',
-    content: `# The Future of Web Development: Web Components
+This creates a problem of its own. High output, low comprehension. The traditional path of writing code, watching it fail, debugging it, and eventually understanding why it failed is becoming less common. And it is becoming way less common because our little helper (yes, whatever AI thingy you prefer right now) will most likely hit that sweet spot of "it is working".
 
-Web Components represent a paradigm shift in how we build web applications. They provide a standard way to encapsulate HTML, CSS, and JavaScript.
+Can a developer become senior without "suffering" through debugging? I genuinely don't know the answer. But I suspect that many of the skills we associate with seniority are forged precisely during those frustrating hours spent chasing bugs, understanding systems, and discovering why something works instead of merely making it work.
 
-## What Are Web Components?
+In my opinion, we may be creating developers who can ship features extremely fast while understanding less of the implementation than previous generations. Understanding the implementation—not just shipping the feature—is what traditionally enabled the transition from junior to senior. The first step of explaining something difficult is to understand it and for me, and I assume for most developers, writing code is better than reading code at this scenario.
 
-Web Components are a set of web platform APIs that allow you to create new, reusable, encapsulated HTML tags for use in web pages and web apps.
+And I'll hit you with another one. Does the AI accelerate learning, or does it bypass it? We have all been through the process of reading the documentation of a library, to add a rather "simple" but not that clear feature. The best mentors rarely solved problems for me. They helped me discover solutions myself. AI optimizes for answers. Great mentors optimize understanding.
 
-## Benefits of Web Components
+What AI is capable of today challenges the old ways. Today, you ask questions and you get answers. Good or bad, it's still answers. The journey from junior to senior has not disappeared, but it has changed. AI can generate solutions faster than developers can generate understanding.
 
-- **Encapsulation**: Shadow DOM provides style and markup encapsulation
-- **Reusability**: Components can be easily shared across projects
-- **Framework Agnostic**: Works with any framework or no framework at all
-- **Standards Based**: Based on web standards, not proprietary technology
+## Redefining "Seniority"
 
-## Building Your First Web Component
+Welcome to the modern, newly discovered world. You now have a "simpler" day routine… And I would say that knowing when not to use AI, is the starting point of that routine. Reading code and spotting generated patterns vs anti-patterns must be hard. Scalability was a major discussion back in the days. How are you going to design systems that can survive scale and constantly change at the same time? And don't get me started on translating those vague product ideas into robust architecture. It is now clear that seniority has shifted from production to discernment.
 
-Creating a web component is straightforward using the Custom Elements API and Shadow DOM.
+And what about mentorship? My favorite subject. Traditionally, you used to be that person to a junior, the one that I admired in my early days. The one that would point you to the way and not just cough up the correct answer. The one that would serve that junior the sweet nectar of discovery. The one to teach syntax patterns, debugging… You now must explain concepts that are not that easy to explain and to be understood. Can you be as good as an AI in that? So many tools out there that can do that…
 
-## Conclusion
-Web Components are poised to become a major part of web development, offering a standards-based approach to component development.`,
-    category: 'Web APIs',
-    tags: ['web-components', 'standards', 'future'],
-    publishedAt: '2024-01-08',
-    readTime: 12
-  },
-  {
-    id: uuidv4(),
-    title: 'Optimizing Core Web Vitals for Better UX',
-    slug: 'optimizing-core-web-vitals',
-    excerpt: "A comprehensive guide to improving your site's Core Web Vitals scores",
-    content: `# Optimizing Core Web Vitals for Better UX
+## The Uncomfortable Question
 
-Core Web Vitals are three key metrics that Google uses to measure user experience. Understanding and optimizing for these metrics is crucial for your website's success.
+Think of this. Juniors are now three times faster than they used to be, but seniors are only one and a half times faster, what will happen to the structure of the teams? How will the hiring process evolve in the upcoming years? What is your value at this moment?
 
-## The Three Core Web Vitals
+Perhaps seniority is not becoming less valuable. Perhaps it is becoming harder to fake. As generating code becomes easier, understanding code becomes more important.
 
-### 1. Largest Contentful Paint (LCP)
-LCP measures the time it takes for the largest element in the viewport to render. Target: < 2.5 seconds
-
-### 2. First Input Delay (FID)
-FID measures the time from a user's first interaction to the browser's response. Target: < 100ms
-
-### 3. Cumulative Layout Shift (CLS)
-CLS measures visual stability by tracking unexpected layout shifts. Target: < 0.1
-
-## Optimization Strategies
-
-- Optimize images and lazy load where possible
-- Minimize JavaScript execution time
-- Improve server response time
-- Use CSS containment for better performance
-- Implement resource hints like prefetch and preconnect
-
-## Monitoring Core Web Vitals
-
-Use tools like Google PageSpeed Insights, Lighthouse, and Web Vitals library to monitor your metrics.
-
-## Conclusion
-Optimizing Core Web Vitals is not just about performance; it's about providing a better user experience.`,
-    category: 'Performance',
-    tags: ['core-web-vitals', 'ux', 'performance'],
-    publishedAt: '2023-12-28',
-    readTime: 10
+The distinction between junior and senior developers may not disappear in the AI era—it may simply move from implementation to judgment.`,
+    category: 'AI & Careers',
+    tags: ['ai', 'seniority', 'mentorship', 'engineering'],
+    publishedAt: '2026-06-06',
+    readTime: 7
   }
 ];

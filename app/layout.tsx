@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { ReactNode } from 'react';
 
+import AnalyticsLoader from '@/app/components/analytics-loader';
+import CookieConsent from '@/app/components/cookie-consent';
 import { Providers } from '@/app/providers/theme-provider';
 
 import './globals.css';
@@ -47,7 +49,11 @@ const RootLayout = ({
 }>) => (
   <html lang="en" suppressHydrationWarning>
     <body className="bg-background text-foreground font-sans antialiased">
-      <Providers>{children}</Providers>
+      <Providers>
+        {children}
+        <CookieConsent />
+        <AnalyticsLoader />
+      </Providers>
     </body>
   </html>
 );
