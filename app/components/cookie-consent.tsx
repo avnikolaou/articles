@@ -23,8 +23,6 @@ const getSnapshot = () => {
 export const CookieConsent = () => {
   const consent = useSyncExternalStore(subscribe, getSnapshot, () => null);
 
-  console.log(consent);
-
   if (consent) {
     return null;
   }
