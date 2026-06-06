@@ -29,7 +29,11 @@ export const generateMetadata = async ({ params }: ArticlePageProps): Promise<Me
   const description = article.excerpt;
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL ??
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : 'http://localhost:3000');
   const url = `/articles/${article.slug}`;
   const image = new URL('/web-app-manifest-512x512.png', siteUrl).toString();
 
@@ -98,9 +102,6 @@ const ArticleDetail = async ({ params }: ArticlePageProps) => {
               className="text-foreground/70 hover:text-accent text-sm transition-colors"
             >
               Contact
-            </Link>
-            <Link href="/admin" className="text-foreground/70 hover:text-accent text-sm transition-colors">
-              Admin
             </Link>
           </div>
         </div>
