@@ -18,13 +18,24 @@ export const metadata: Metadata = {
       'Frontend developer building beautiful, performant web applications. Read articles on modern web development.',
     url: '/',
     siteName: 'Avraam Nikolaou',
-    type: 'website'
+    type: 'website',
+    images: [
+      {
+        url: '/api/og?title=Building%20beautiful%2C%20performant%20web%20experiences&cta=Read%20articles%20at%20avnikolaou.com',
+        width: 1200,
+        height: 630,
+        alt: 'Avraam Nikolaou | Frontend Developer'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Avraam Nikolaou | Frontend Developer',
     description:
-      'Frontend developer building beautiful, performant web applications. Read articles on modern web development.'
+      'Frontend developer building beautiful, performant web applications. Read articles on modern web development.',
+    images: [
+      '/api/og?title=Building%20beautiful%2C%20performant%20web%20experiences&cta=Read%20articles%20at%20avnikolaou.com'
+    ]
   }
 };
 
