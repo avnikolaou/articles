@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import Footer from '@/app/components/footer';
+import { MOCK_ARTICLES } from '@/app/lib/types';
 import { ThemeToggle } from '@/app/providers/theme-toggle';
 
 export const metadata: Metadata = {
@@ -40,18 +41,15 @@ const Home = () => {
             AN
           </Link>
           <div className="flex items-center gap-8">
-            {/*<Link href="/articles" className="text-sm text-foreground/70 hover:text-accent transition-colors">*/}
-            {/*  Articles*/}
-            {/*</Link>*/}
+            <Link href="/articles" className="text-foreground/70 hover:text-accent text-sm transition-colors">
+              Articles
+            </Link>
             <Link href="/about" className="text-foreground/70 hover:text-accent text-sm transition-colors">
               About
             </Link>
             <Link href="/contact" className="text-foreground/70 hover:text-accent text-sm transition-colors">
               Contact
             </Link>
-            {/*<Link href="/admin" className="text-sm text-foreground/70 hover:text-accent transition-colors">*/}
-            {/*  Admin*/}
-            {/*</Link>*/}
             <ThemeToggle />
           </div>
         </div>
@@ -83,13 +81,13 @@ const Home = () => {
 
         {/* CTA Buttons */}
         <div className="mb-20 flex flex-col gap-4 sm:flex-row">
-          {/*<Link*/}
-          {/*  href="/articles"*/}
-          {/*  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-medium rounded-lg hover:bg-accent/90 transition-colors group"*/}
-          {/*>*/}
-          {/*  Read Articles*/}
-          {/*  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />*/}
-          {/*</Link>*/}
+          <Link
+            href="/articles"
+            className="bg-accent text-accent-foreground hover:bg-accent/90 group inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 font-medium transition-colors"
+          >
+            Read Articles
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </Link>
           <Link
             href="/about"
             className="border-border bg-secondary/20 hover:bg-secondary/40 text-foreground inline-flex items-center justify-center rounded-lg border px-6 py-3 font-medium transition-colors"
@@ -98,59 +96,42 @@ const Home = () => {
           </Link>
         </div>
 
-        {/* Featured Articles Preview - Coming Soon */}
+        {/* Featured Articles Preview */}
         <div className="space-y-6">
           <p className="text-foreground/60 text-sm font-semibold tracking-wide uppercase">Featured Articles</p>
 
-          <div className="border-border/50 bg-secondary/20 flex items-center justify-center rounded-lg border py-12">
-            <div className="space-y-3 text-center">
-              <p className="text-foreground font-medium">Articles coming soon</p>
-              <p className="text-foreground/70 text-sm">
-                Check back soon for in-depth articles on frontend development, performance optimization, and web
-                technologies.
-              </p>
-              {/*<Link*/}
-              {/*  href="/articles"*/}
-              {/*  className="inline-flex items-center gap-2 text-accent hover:text-accent/80 font-medium transition-colors mt-4"*/}
-              {/*>*/}
-              {/*  View all articles*/}
-              {/*  <ArrowRight className="w-4 h-4" />*/}
-              {/*</Link>*/}
-            </div>
-          </div>
-
-          {/* Commented out featured articles section - uncomment when articles are available
           <div className="grid gap-4">
-            {[
-              { slug: 'building-high-performance-react-applications', title: 'Building High-Performance React Applications', desc: 'Techniques and best practices for optimizing React performance at scale', category: 'React', date: '3 days ago', time: '8 min' },
-              { slug: 'future-of-web-development-web-components', title: 'The Future of Web Development: Web Components', desc: 'Exploring the rise of web components and their impact on modern frontend development', category: 'Web APIs', date: '1 week ago', time: '12 min' },
-              { slug: 'optimizing-core-web-vitals', title: 'Optimizing Core Web Vitals for Better UX', desc: 'A comprehensive guide to improving your site\'s Core Web Vitals scores', category: 'Performance', date: '2 weeks ago', time: '10 min' },
-            ].map((article) => (
+            {MOCK_ARTICLES.slice(0, 3).map((article) => (
               <Link
-                key={article.slug}
+                key={article.id}
                 href={`/articles/${article.slug}`}
-                className="group p-5 rounded-lg border border-border/50 hover:border-accent/50 bg-secondary/30 hover:bg-secondary/50 transition-all duration-300"
+                className="border-border/50 bg-secondary/30 hover:border-accent/50 hover:bg-secondary/50 group rounded-lg border p-5 transition-all duration-300"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
-                    <h3 className="font-semibold text-foreground group-hover:text-accent transition-colors mb-2">
+                    <h3 className="text-foreground group-hover:text-accent mb-2 font-semibold transition-colors">
                       {article.title}
                     </h3>
-                    <p className="text-sm text-foreground/60">
-                      {article.desc}
-                    </p>
+                    <p className="text-foreground/60 text-sm">{article.excerpt}</p>
                   </div>
-                  <span className="text-xs px-3 py-1 rounded-full bg-accent/20 text-accent whitespace-nowrap">
+                  <span className="bg-accent/20 text-accent rounded-full px-3 py-1 text-xs whitespace-nowrap">
                     {article.category}
                   </span>
                 </div>
-                <p className="text-xs text-foreground/50 mt-4">
-                  {article.time} read • {article.date}
+                <p className="text-foreground/50 mt-4 text-xs">
+                  {article.readTime} min read • {article.publishedAt}
                 </p>
               </Link>
             ))}
           </div>
-          */}
+
+          <Link
+            href="/articles"
+            className="text-accent hover:text-accent/80 mt-2 inline-flex items-center gap-2 text-sm font-medium transition-colors"
+          >
+            View all articles
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </Link>
         </div>
       </div>
 
