@@ -20,8 +20,25 @@ const getSnapshot = () => {
   return localStorage.getItem(STORAGE_KEY);
 };
 
+const subscribeHydration = () => {
+  return () => {};
+};
+
+const getHydrationSnapshot = () => {
+  return true;
+};
+
+const getHydrationServerSnapshot = () => {
+  return false;
+};
+
 export const CookieConsent = () => {
+  const isHydrated = useSyncExternalStore(subscribeHydration, getHydrationSnapshot, getHydrationServerSnapshot);
   const consent = useSyncExternalStore(subscribe, getSnapshot, () => null);
+
+  if (!isHydrated) {
+    return null;
+  }
 
   if (consent) {
     return null;
