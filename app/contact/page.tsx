@@ -18,13 +18,22 @@ export const metadata: Metadata = {
       'Get in touch with Avraam Nikolaou for frontend consulting, performance optimization, technical writing, or collaboration opportunities.',
     url: '/contact',
     siteName: 'Avraam Nikolaou',
-    type: 'website'
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Contact | Avraam Nikolaou'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Contact | Avraam Nikolaou',
     description:
-      'Get in touch with Avraam Nikolaou for frontend consulting, performance optimization, technical writing, or collaboration opportunities.'
+      'Get in touch with Avraam Nikolaou for frontend consulting, performance optimization, technical writing, or collaboration opportunities.',
+    images: ['/og-image.png']
   }
 };
 
