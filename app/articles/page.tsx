@@ -55,9 +55,6 @@ const ArticlesPage = () => {
             AN
           </Link>
           <div className="flex items-center gap-8">
-            <Link href="/" className="text-foreground/70 hover:text-accent text-sm transition-colors">
-              Home
-            </Link>
             <Link href="/articles" className="text-accent text-sm font-medium">
               Articles
             </Link>

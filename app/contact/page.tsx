@@ -30,27 +30,24 @@ export const metadata: Metadata = {
 
 const ContactPage = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/5">
+    <main className="from-background via-background to-secondary/5 min-h-screen bg-gradient-to-br">
       {/* Navigation */}
-      <nav className="border-b border-border/50">
-        <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
+      <nav className="border-border/50 border-b">
+        <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-6">
           <Link
             href="/"
-            className="text-xl font-bold bg-gradient-to-r from-accent to-accent/70 bg-clip-text text-transparent"
+            className="from-accent to-accent/70 bg-gradient-to-r bg-clip-text text-xl font-bold text-transparent"
           >
             AN
           </Link>
           <div className="flex items-center gap-8">
-            <Link href="/" className="text-sm text-foreground/70 hover:text-accent transition-colors">
-              Home
+            <Link href="/articles" className="text-foreground/70 hover:text-accent text-sm transition-colors">
+              Articles
             </Link>
-            {/*<Link href="/articles" className="text-sm text-foreground/70 hover:text-accent transition-colors">*/}
-            {/*  Articles*/}
-            {/*</Link>*/}
-            <Link href="/about" className="text-sm text-foreground/70 hover:text-accent transition-colors">
+            <Link href="/about" className="text-foreground/70 hover:text-accent text-sm transition-colors">
               About
             </Link>
-            <Link href="/contact" className="text-sm text-accent font-medium">
+            <Link href="/contact" className="text-accent text-sm font-medium">
               Contact
             </Link>
             {/*<Link href="/admin" className="text-sm text-foreground/70 hover:text-accent transition-colors">*/}
@@ -61,93 +58,93 @@ const ContactPage = () => {
         </div>
       </nav>
 
-      <div className="max-w-4xl mx-auto px-6 py-24">
+      <div className="mx-auto max-w-4xl px-6 py-24">
         {/* Header */}
-        <div className="max-w-2xl mb-16">
-          <Link href="/" className="inline-flex items-center gap-2 text-accent hover:text-accent/80 font-medium mb-8">
-            <ArrowLeft className="w-4 h-4" />
+        <div className="mb-16 max-w-2xl">
+          <Link href="/" className="text-accent hover:text-accent/80 mb-8 inline-flex items-center gap-2 font-medium">
+            <ArrowLeft className="h-4 w-4" />
             Back
           </Link>
-          <h1 className="text-5xl font-bold tracking-tight mb-6 text-balance">Get in Touch</h1>
-          <p className="text-lg text-foreground/70 text-balance">
+          <h1 className="mb-6 text-5xl font-bold tracking-tight text-balance">Get in Touch</h1>
+          <p className="text-foreground/70 text-lg text-balance">
             I&apos;m always interested in hearing about new projects and interesting ideas. Feel free to reach out!
           </p>
         </div>
 
         {/* Contact Methods */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-2xl">
+        <div className="grid max-w-2xl gap-8 md:grid-cols-2">
           {/* Email */}
-          <div className="p-8 rounded-lg border border-border/50 bg-secondary/20">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-accent/20">
-                <Mail className="w-5 h-5 text-accent" />
+          <div className="border-border/50 bg-secondary/20 rounded-lg border p-8">
+            <div className="mb-4 flex items-center gap-3">
+              <div className="bg-accent/20 rounded-lg p-2">
+                <Mail className="text-accent h-5 w-5" />
               </div>
-              <h3 className="font-semibold text-foreground">Email</h3>
+              <h3 className="text-foreground font-semibold">Email</h3>
             </div>
             <p className="text-foreground/70 mb-4">For general inquiries and project discussions</p>
             <a
               href="mailto:avnikolaou@outlook.com"
-              className="inline-flex items-center px-4 py-2 rounded-lg bg-accent text-accent-foreground font-medium hover:bg-accent/90 transition-colors"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 inline-flex items-center rounded-lg px-4 py-2 font-medium transition-colors"
             >
               Send Email
             </a>
           </div>
 
           {/* GitHub */}
-          <div className="p-8 rounded-lg border border-border/50 bg-secondary/20">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-accent/20">
-                <Github className="w-5 h-5 text-accent" />
+          <div className="border-border/50 bg-secondary/20 rounded-lg border p-8">
+            <div className="mb-4 flex items-center gap-3">
+              <div className="bg-accent/20 rounded-lg p-2">
+                <Github className="text-accent h-5 w-5" />
               </div>
-              <h3 className="font-semibold text-foreground">GitHub</h3>
+              <h3 className="text-foreground font-semibold">GitHub</h3>
             </div>
             <p className="text-foreground/70 mb-4">Check out my projects and contributions</p>
             <a
               href="https://github.com/avnikolaou"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 rounded-lg bg-accent text-accent-foreground font-medium hover:bg-accent/90 transition-colors"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 inline-flex items-center rounded-lg px-4 py-2 font-medium transition-colors"
             >
               Visit Profile
             </a>
           </div>
 
           {/* LinkedIn */}
-          <div className="p-8 rounded-lg border border-border/50 bg-secondary/20">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-accent/20">
-                <Linkedin className="w-5 h-5 text-accent" />
+          <div className="border-border/50 bg-secondary/20 rounded-lg border p-8">
+            <div className="mb-4 flex items-center gap-3">
+              <div className="bg-accent/20 rounded-lg p-2">
+                <Linkedin className="text-accent h-5 w-5" />
               </div>
-              <h3 className="font-semibold text-foreground">LinkedIn</h3>
+              <h3 className="text-foreground font-semibold">LinkedIn</h3>
             </div>
             <p className="text-foreground/70 mb-4">Connect with me on professional network</p>
             <a
               href="https://linkedin.com/in/avraam-nikolaou/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 rounded-lg bg-accent text-accent-foreground font-medium hover:bg-accent/90 transition-colors"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 inline-flex items-center rounded-lg px-4 py-2 font-medium transition-colors"
             >
               Connect
             </a>
           </div>
 
           {/* Response Time */}
-          <div className="p-8 rounded-lg border border-border/50 bg-secondary/20">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-accent/20">
-                <span className="w-5 h-5 text-accent font-bold">⏱</span>
+          <div className="border-border/50 bg-secondary/20 rounded-lg border p-8">
+            <div className="mb-4 flex items-center gap-3">
+              <div className="bg-accent/20 rounded-lg p-2">
+                <span className="text-accent h-5 w-5 font-bold">⏱</span>
               </div>
-              <h3 className="font-semibold text-foreground">Response Time</h3>
+              <h3 className="text-foreground font-semibold">Response Time</h3>
             </div>
             <p className="text-foreground/70 mb-4">I typically respond within 24-48 hours</p>
-            <p className="text-xs text-foreground/50">Timezone: UTC+2</p>
+            <p className="text-foreground/50 text-xs">Timezone: UTC+2</p>
           </div>
         </div>
 
         {/* Additional Info */}
-        <div className="mt-16 p-8 rounded-lg border border-border/50 bg-secondary/20 max-w-2xl">
-          <h2 className="text-xl font-semibold text-foreground mb-4">What I&apos;m interested in</h2>
-          <ul className="space-y-2 text-foreground/70">
+        <div className="border-border/50 bg-secondary/20 mt-16 max-w-2xl rounded-lg border p-8">
+          <h2 className="text-foreground mb-4 text-xl font-semibold">What I&apos;m interested in</h2>
+          <ul className="text-foreground/70 space-y-2">
             <li>Frontend development projects and consulting</li>
             <li>Performance optimization for web applications</li>
             <li>Technical writing and speaking opportunities</li>
