@@ -35,7 +35,10 @@ export const generateMetadata = async ({ params }: ArticlePageProps): Promise<Me
         ? `https://${process.env.VERCEL_URL}`
         : 'http://localhost:3000');
   const url = `/articles/${article.slug}`;
-  const image = new URL('/web-app-manifest-512x512.png', siteUrl).toString();
+  const image = new URL(
+    `/api/og?title=${encodeURIComponent(article.title)}&cta=${encodeURIComponent('Read the full article at avnikolaou.com')}`,
+    siteUrl
+  ).toString();
 
   return {
     title,
