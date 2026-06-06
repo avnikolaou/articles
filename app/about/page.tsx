@@ -18,13 +18,22 @@ export const metadata: Metadata = {
       'Learn more about Avraam Nikolaou, a frontend engineer focused on scalable architecture, performance, and user-centric product development.',
     url: '/about',
     siteName: 'Avraam Nikolaou',
-    type: 'profile'
+    type: 'profile',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'About | Avraam Nikolaou'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About | Avraam Nikolaou',
     description:
-      'Learn more about Avraam Nikolaou, a frontend engineer focused on scalable architecture, performance, and user-centric product development.'
+      'Learn more about Avraam Nikolaou, a frontend engineer focused on scalable architecture, performance, and user-centric product development.',
+    images: ['/og-image.png']
   }
 };
 

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/api/og?title=Building%20beautiful%2C%20performant%20web%20experiences&cta=Read%20articles%20at%20avnikolaou.com',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Avraam Nikolaou | Frontend Developer'
@@ -33,9 +33,7 @@ export const metadata: Metadata = {
     title: 'Avraam Nikolaou | Frontend Developer',
     description:
       'Frontend developer building beautiful, performant web applications. Read articles on modern web development.',
-    images: [
-      '/api/og?title=Building%20beautiful%2C%20performant%20web%20experiences&cta=Read%20articles%20at%20avnikolaou.com'
-    ]
+    images: ['/og-image.png']
   }
 };
 
