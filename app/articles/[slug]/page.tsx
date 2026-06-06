@@ -27,12 +27,16 @@ export const generateMetadata = async ({ params }: ArticlePageProps): Promise<Me
 
   const title = `${article.title} | Avraam Nikolaou`;
   const description = article.excerpt;
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
   const url = `/articles/${article.slug}`;
-  const image = '/web-app-manifest-512x512.png';
+  const image = new URL('/web-app-manifest-512x512.png', siteUrl).toString();
 
   return {
     title,
     description,
+    metadataBase: new URL(siteUrl),
     alternates: {
       canonical: url
     },
