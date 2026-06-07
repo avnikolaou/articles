@@ -5,23 +5,31 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 import { ThemeToggle } from '@/app/providers/theme-toggle';
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'http://localhost:3000');
+
 export const metadata: Metadata = {
   title: 'About | Avraam Nikolaou',
   description:
     'Learn more about Avraam Nikolaou, a frontend engineer focused on scalable architecture, performance, and user-centric product development.',
   alternates: {
-    canonical: '/about'
+    canonical: `${siteUrl}/about`
   },
   openGraph: {
     title: 'About | Avraam Nikolaou',
     description:
       'Learn more about Avraam Nikolaou, a frontend engineer focused on scalable architecture, performance, and user-centric product development.',
-    url: '/about',
+    url: `${siteUrl}/about`,
     siteName: 'Avraam Nikolaou',
     type: 'profile',
     images: [
       {
-        url: '/og-image.png',
+        url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'About | Avraam Nikolaou'
@@ -33,7 +41,7 @@ export const metadata: Metadata = {
     title: 'About | Avraam Nikolaou',
     description:
       'Learn more about Avraam Nikolaou, a frontend engineer focused on scalable architecture, performance, and user-centric product development.',
-    images: ['/og-image.png']
+    images: [`${siteUrl}/og-image.png`]
   }
 };
 
