@@ -5,23 +5,31 @@ import Footer from '@/app/components/footer';
 import { MOCK_ARTICLES } from '@/app/lib/types';
 import { ThemeToggle } from '@/app/providers/theme-toggle';
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'http://localhost:3000');
+
 export const metadata: Metadata = {
   title: 'Avraam Nikolaou | Frontend Developer',
   description:
     'Frontend developer building beautiful, performant web applications. Read articles on modern web development.',
   alternates: {
-    canonical: '/'
+    canonical: `${siteUrl}/`
   },
   openGraph: {
     title: 'Avraam Nikolaou | Frontend Developer',
     description:
       'Frontend developer building beautiful, performant web applications. Read articles on modern web development.',
-    url: '/',
+    url: `${siteUrl}/`,
     siteName: 'Avraam Nikolaou',
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'Avraam Nikolaou | Frontend Developer'
@@ -33,7 +41,7 @@ export const metadata: Metadata = {
     title: 'Avraam Nikolaou | Frontend Developer',
     description:
       'Frontend developer building beautiful, performant web applications. Read articles on modern web development.',
-    images: ['/og-image.png']
+    images: [`${siteUrl}/og-image.png`]
   }
 };
 

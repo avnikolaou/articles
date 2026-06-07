@@ -5,23 +5,31 @@ import { ArrowLeft, Github, Linkedin, Mail } from 'lucide-react';
 
 import { ThemeToggle } from '@/app/providers/theme-toggle';
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'http://localhost:3000');
+
 export const metadata: Metadata = {
   title: 'Contact | Avraam Nikolaou',
   description:
     'Get in touch with Avraam Nikolaou for frontend consulting, performance optimization, technical writing, or collaboration opportunities.',
   alternates: {
-    canonical: '/contact'
+    canonical: `${siteUrl}/contact`
   },
   openGraph: {
     title: 'Contact | Avraam Nikolaou',
     description:
       'Get in touch with Avraam Nikolaou for frontend consulting, performance optimization, technical writing, or collaboration opportunities.',
-    url: '/contact',
+    url: `${siteUrl}/contact`,
     siteName: 'Avraam Nikolaou',
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'Contact | Avraam Nikolaou'
@@ -33,7 +41,7 @@ export const metadata: Metadata = {
     title: 'Contact | Avraam Nikolaou',
     description:
       'Get in touch with Avraam Nikolaou for frontend consulting, performance optimization, technical writing, or collaboration opportunities.',
-    images: ['/og-image.png']
+    images: [`${siteUrl}/og-image.png`]
   }
 };
 
