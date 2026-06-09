@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react';
 
 import { Search } from 'lucide-react';
 
+import Navigation from '@/app/components/navigation';
 import { MOCK_ARTICLES } from '@/app/lib/types';
-import { ThemeToggle } from '@/app/providers/theme-toggle';
 
 const SEARCH_DEBOUNCE_DELAY = 300;
 
@@ -45,32 +45,7 @@ const ArticlesPage = () => {
 
   return (
     <main className="from-background via-background to-secondary/5 min-h-screen bg-gradient-to-br">
-      {/* Navigation */}
-      <nav className="border-border/50 bg-background/80 sticky top-0 border-b backdrop-blur">
-        <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-6">
-          <Link
-            href="/"
-            className="from-accent to-accent/70 bg-gradient-to-r bg-clip-text text-xl font-bold text-transparent"
-          >
-            AN
-          </Link>
-          <div className="flex items-center gap-8">
-            <Link href="/articles" className="text-accent text-sm font-medium">
-              Articles
-            </Link>
-            <Link href="/about" className="text-foreground/70 hover:text-accent text-sm transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="text-foreground/70 hover:text-accent text-sm transition-colors">
-              Contact
-            </Link>
-            {/*<Link href="/admin" className="text-sm text-foreground/70 hover:text-accent transition-colors">*/}
-            {/*  Admin*/}
-            {/*</Link>*/}
-            <ThemeToggle />
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       <div className="mx-auto max-w-4xl px-6 py-24">
         {/* Header */}

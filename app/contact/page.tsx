@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { ArrowLeft, Github, Linkedin, Mail } from 'lucide-react';
 
-import { ThemeToggle } from '@/app/providers/theme-toggle';
+import Navigation from '@/app/components/navigation';
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
@@ -48,32 +48,7 @@ export const metadata: Metadata = {
 const ContactPage = () => {
   return (
     <main className="from-background via-background to-secondary/5 min-h-screen bg-gradient-to-br">
-      {/* Navigation */}
-      <nav className="border-border/50 border-b">
-        <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-6">
-          <Link
-            href="/"
-            className="from-accent to-accent/70 bg-gradient-to-r bg-clip-text text-xl font-bold text-transparent"
-          >
-            AN
-          </Link>
-          <div className="flex items-center gap-8">
-            <Link href="/articles" className="text-foreground/70 hover:text-accent text-sm transition-colors">
-              Articles
-            </Link>
-            <Link href="/about" className="text-foreground/70 hover:text-accent text-sm transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="text-accent text-sm font-medium">
-              Contact
-            </Link>
-            {/*<Link href="/admin" className="text-sm text-foreground/70 hover:text-accent transition-colors">*/}
-            {/*  Admin*/}
-            {/*</Link>*/}
-            <ThemeToggle />
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       <div className="mx-auto max-w-4xl px-6 py-24">
         {/* Header */}

@@ -1,39 +1,13 @@
-import Link from 'next/link';
 
 import { Edit2, Plus, Trash2 } from 'lucide-react';
 
+import Navigation from '@/app/components/navigation';
 import { MOCK_ARTICLES } from '@/app/lib/types';
-import { ThemeToggle } from '@/app/providers/theme-toggle';
 
 const AdminPage = () => {
   return (
     <main className="from-background via-background to-secondary/5 min-h-screen bg-gradient-to-br">
-      {/* Navigation */}
-      <nav className="border-border/50 border-b">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-          <Link
-            href="/"
-            className="from-accent to-accent/70 bg-gradient-to-r bg-clip-text text-xl font-bold text-transparent"
-          >
-            AN
-          </Link>
-          <div className="flex items-center gap-8">
-            <Link href="/articles" className="text-foreground/70 hover:text-accent text-sm transition-colors">
-              Articles
-            </Link>
-            <Link href="/about" className="text-foreground/70 hover:text-accent text-sm transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="text-foreground/70 hover:text-accent text-sm transition-colors">
-              Contact
-            </Link>
-            <Link href="/admin" className="text-accent text-sm font-medium">
-              Admin
-            </Link>
-            <ThemeToggle />
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Main Content */}
       <div className="mx-auto max-w-6xl px-6 py-16">
