@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import Footer from '@/app/components/footer';
+import Navigation from '@/app/components/navigation';
 import { MOCK_ARTICLES } from '@/app/lib/types';
-import { ThemeToggle } from '@/app/providers/theme-toggle';
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
@@ -48,29 +48,7 @@ export const metadata: Metadata = {
 const Home = () => {
   return (
     <main className="from-background via-background to-secondary/5 min-h-screen bg-gradient-to-br">
-      {/* Navigation */}
-      <nav className="border-border/50 border-b">
-        <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-6">
-          <Link
-            href="/"
-            className="from-accent to-accent/70 bg-gradient-to-r bg-clip-text text-xl font-bold text-transparent"
-          >
-            AN
-          </Link>
-          <div className="flex items-center gap-8">
-            <Link href="/articles" className="text-foreground/70 hover:text-accent text-sm transition-colors">
-              Articles
-            </Link>
-            <Link href="/about" className="text-foreground/70 hover:text-accent text-sm transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="text-foreground/70 hover:text-accent text-sm transition-colors">
-              Contact
-            </Link>
-            <ThemeToggle />
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <div className="mx-auto max-w-4xl px-6 py-24 md:py-32">
@@ -90,11 +68,11 @@ const Home = () => {
         </h1>
 
         {/* Subheading */}
-        <p className="text-foreground/70 mb-12 max-w-2xl text-lg leading-relaxed text-balance">
+        <h2 className="text-foreground/70 mb-12 max-w-2xl text-lg leading-relaxed text-balance">
           I&apos;m a frontend developer with over 7 years of experience crafting scalable, user-centric applications.
           Here I share insights on modern web development, performance optimization, and building delightful user
           experiences.
-        </p>
+        </h2>
 
         {/* CTA Buttons */}
         <div className="mb-20 flex flex-col gap-4 sm:flex-row">

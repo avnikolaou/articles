@@ -5,6 +5,7 @@ import { JSX } from 'react/jsx-runtime';
 
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 
+import Navigation from '@/app/components/navigation';
 import { MOCK_ARTICLES } from '@/app/lib/types';
 import IntrinsicElements = JSX.IntrinsicElements;
 
@@ -84,31 +85,7 @@ const ArticleDetail = async ({ params }: ArticlePageProps) => {
 
   return (
     <main className="from-background via-background to-secondary/5 min-h-screen bg-gradient-to-br">
-      {/* Navigation */}
-      <nav className="border-border/50 border-b">
-        <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-6">
-          <Link
-            href="/"
-            className="from-accent to-accent/70 bg-gradient-to-r bg-clip-text text-xl font-bold text-transparent"
-          >
-            AN
-          </Link>
-          <div className="flex items-center gap-8">
-            <Link href="/articles" className="text-foreground/70 hover:text-accent text-sm transition-colors">
-              Articles
-            </Link>
-            <Link href="/about" className="text-foreground/70 hover:text-accent text-sm transition-colors">
-              About
-            </Link>
-            <Link
-              href="mailto:avnikolaou@outlook.com"
-              className="text-foreground/70 hover:text-accent text-sm transition-colors"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Article Content */}
       <div className="mx-auto max-w-4xl px-6 py-16">
