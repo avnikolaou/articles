@@ -39,6 +39,9 @@ export const metadata: Metadata = {
         type: 'image/png'
       }
     ]
+  },
+  other: {
+    'google-site-verification': process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? ''
   }
 };
 
