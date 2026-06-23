@@ -40,8 +40,8 @@ export const metadata: Metadata = {
       }
     ]
   },
-  other: {
-    'google-site-verification': process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? ''
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? ''
   }
 };
 
