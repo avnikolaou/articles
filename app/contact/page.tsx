@@ -88,7 +88,7 @@ const ContactPage = () => {
               <div className="bg-accent/20 rounded-lg p-2">
                 <Github className="text-accent h-5 w-5" />
               </div>
-              <h3 className="text-foreground font-semibold">GitHub</h3>
+              <h2 className="text-foreground font-semibold">GitHub</h2>
             </div>
             <p className="text-foreground/70 mb-4">Check out my projects and contributions</p>
             <a
@@ -107,7 +107,7 @@ const ContactPage = () => {
               <div className="bg-accent/20 rounded-lg p-2">
                 <Linkedin className="text-accent h-5 w-5" />
               </div>
-              <h3 className="text-foreground font-semibold">LinkedIn</h3>
+              <h2 className="text-foreground font-semibold">LinkedIn</h2>
             </div>
             <p className="text-foreground/70 mb-4">Connect with me on professional network</p>
             <a
@@ -126,7 +126,7 @@ const ContactPage = () => {
               <div className="bg-accent/20 rounded-lg p-2">
                 <span className="text-accent h-5 w-5 font-bold">⏱</span>
               </div>
-              <h3 className="text-foreground font-semibold">Response Time</h3>
+              <h2 className="text-foreground font-semibold">Response Time</h2>
             </div>
             <p className="text-foreground/70 mb-4">I typically respond within 24-48 hours</p>
             <p className="text-foreground/50 text-xs">Timezone: UTC+2</p>
