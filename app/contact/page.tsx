@@ -71,7 +71,7 @@ const ContactPage = () => {
               <div className="bg-accent/20 rounded-lg p-2">
                 <Mail className="text-accent h-5 w-5" />
               </div>
-              <h3 className="text-foreground font-semibold">Email</h3>
+              <h2 className="text-foreground font-semibold">Email</h2>
             </div>
             <p className="text-foreground/70 mb-4">For general inquiries and project discussions</p>
             <a
